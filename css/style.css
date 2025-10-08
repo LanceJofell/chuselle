@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle at top, #ffd6e8, #ffb3c6, #ffe6f2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+/* Glowing greeting letters */
+.greetings {
+    font-size: 6rem;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 600;
+    letter-spacing: 8px;
+    line-height: 1.1;
+    word-break: break-word;
+    text-align: center;
+}
+
+.greetings > span {
+    display: inline-block;
+    animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        color: #fff;
+        text-shadow: 0 0 20px #ff80aa, 0 0 40px #ff4da6, 0 0 80px #ff1a8c;
+    }
+    50% {
+        color: #ffe6f2;
+        text-shadow: 0 0 10px #ffcce0, 0 0 30px #ff80aa;
+    }
+}
+
+.greetings > span:nth-child(2) { animation-delay: .1s; }
+.greetings > span:nth-child(3) { animation-delay: .2s; }
+.greetings > span:nth-child(4) { animation-delay: .3s; }
+.greetings > span:nth-child(5) { animation-delay: .4s; }
+.greetings > span:nth-child(6) { animation-delay: .5s; }
+.greetings > span:nth-child(7) { animation-delay: .6s; }
+.greetings > span:nth-child(8) { animation-delay: .7s; }
+
+/* Message */
+.description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    line-height: 1.8;
+    color: #fff0f5;
+    text-shadow: 0 0 10px #ffb3d9;
+    animation: fadeIn 2.5s ease-in;
+    padding: 0 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Button */
+.button {
+    margin-top: 2.5rem;
+}
+
+.button button {
+    background-color: #ff80aa;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff99cc, 0 0 25px #ff66b2;
+    transition: all 0.3s ease;
+}
+
+.button button:hover {
+    background-color: #ff4d88;
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #ff80bf, 0 0 40px #ff4da6;
+}
+
+.button button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Floating hearts */
+.floating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    bottom: -10px;
+    font-size: 2rem;
+    opacity: 0.8;
+    animation: float 8s linear infinite;
+    color: #ff80aa;
+}
+
+.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 30%; animation-delay: 2s; }
+.heart:nth-child(3) { left: 50%; animation-delay: 4s; }
+.heart:nth-child(4) { left: 70%; animation-delay: 6s; }
+.heart:nth-child(5) { left: 90%; animation-delay: 1s; }
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+/* Sparkles */
+.sparkles::before {
+    content: "✨ ✨ ✨ ✨ ✨";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    opacity: 0.8;
+    animation: sparkle 6s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* 🌸 Responsive Design */
+@media (max-width: 1024px) {
+    .greetings {
+        font-size: 5rem;
+    }
+    .description {
+        font-size: 1.2rem;
+    }
+    .button button {
+        padding: 10px 30px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .greetings {
+        font-size: 4rem;
+        letter-spacing: 5px;
+    }
+    .description {
+        font-size: 1rem;
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .greetings {
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+    .description {
+        font-size: 0.9rem;
+        padding: 0 15px;
+        line-height: 1.6;
+    }
+    .button button {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+        border-radius: 25px;
+    }
+}
