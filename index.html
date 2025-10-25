@@ -2,56 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Someone Special 💌</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/flowers.png" type="image/x-icon">
-    <title>HAPPY BIRTHDAY 💖 chuselle</title>
 </head>
 <body>
-    <div class="floating-elements">
-        <div class="heart">💖</div>
-        <div class="heart">💞</div>
-        <div class="heart">💕</div>
-        <div class="heart">💘</div>
-        <div class="heart">💗</div>
+    <div class="container">
+        <div class="envelope" id="envelope">
+            <div class="flap"></div>
+            <div class="pocket"></div>
+            <div class="letter">
+                <div class="text">
+                    <p class="dear">for everything 💕</p>
+
+                    
+
+                    <p>Every moment with you was a fleeting spark of happiness, it didn’t last long, but it’ll always have a place in my heart. I’ll always carry those memories with me. Maybe it was just bad timing, but it was real, and that’s what made it beautiful to me.</p>
+                    <p>If someday you change your mind, I’ll still be here just find me. </p>
+                    <p> 
+
+                    </p>
+                    <p>— From someone who knew it wouldn’t last, but still hoped it would </p>
+
+                    <div class="button">
+                        <button>
+                            <a href="yellow.html">my yellow</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="note">📩 click here</p>
     </div>
 
-    <div class="greetings">
-        <span>H</span>
-        <span>A</span>
-        <span>P</span>
-        <span>P</span>
-        <span>Y</span>
-    </div>
-
-    <div class="greetings">
-        <span>B</span>
-        <span>I</span>
-        <span>R</span>
-        <span>T</span>
-        <span>H</span>
-        <span>D</span>
-        <span>A</span>
-        <span>Y</span>
-    </div>
-
-    <div class="description">
-        <span>🌷 boss! today is all about you 🌷<br>
-        You deserve a world filled with light, laughter, and warmth.<br>
-         💕</span>
-    </div>
-    <div class="description">
-        <span>-Lance</span>
-    </div>
-
-    <div class="button">
-        <button>
-            <a href="yellow.html">🎁 Click Here for Your Surprise</a>
-        </button>
-    </div>
-    
-
-    <div class="sparkles"></div>
+    <script>
+        const envelope = document.getElementById('envelope');
+        envelope.addEventListener('click', (e) => {
+            // Prevent closing when clicking the link
+            if (e.target.tagName.toLowerCase() !== 'a') {
+                envelope.classList.toggle('open');
+            }
+        });
+    </script>
 </body>
 </html>
